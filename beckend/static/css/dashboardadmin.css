@@ -1,0 +1,19 @@
+.dashboardContainer{
+    margin: 10px 20px 0px;
+}
+.judul-admin{
+font-family: 'Lato' sans-serif;
+font-size: 48px;
+}
+.card1{
+    width: 30%;
+}
+.card1 h5{
+    font-family: 'Roboto'sans-serif;
+    font-weight: 500;
+}
+.edo{
+    width: 40%;
+    float: right;
+    height: auto;
+}

@@ -1,0 +1,286 @@
+{% block content %}
+
+<head>
+  <link rel="stylesheet" href="../static/css/hero.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/chatbot.css')}}" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- <style>
+        .hero {
+    height:120vh;
+  }
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -9999;
+  }
+  .hero-title {
+    font-size: 48px;
+    font-family: 'Lato',sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding: 0px 50px;
+  }
+  .subheading {
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+      
+  }
+  .hero-bg {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+  .hero-bg-bg {
+      width:100%;
+      height:70vh;
+      background:rgba(0,0,0,0.5);
+      position:absolute;
+      top: 0;
+      left: 0;
+      z-index: -9998;
+      width: 135%;
+      height: 190%;
+    }
+  .hero-mb {
+    display: none;
+  }
+  .heroDesc {
+    margin-top:25%;
+    text-align: center;
+  }
+  .cta {
+    position: relative;
+    float: right;
+    bottom: 85%;
+    right: 2.5%;
+  }
+  
+  .cta .btn {
+    background: #7cb1a1;
+    padding: 2rem;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+  }
+  .cta .btn:hover {
+    background: #3e6f7c;
+    color: #fff;
+  }
+  @media only screen and (max-width: 768px) {
+    .hero-title {
+      font-family: "Lato", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 43px;
+    }
+    .subheading {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      margin-top: 40px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .hero-bg {
+      top: 0;
+      left: 0;
+      z-index: -9999;
+      width: 135%;
+      height: 100%;
+    }
+    .hero-bg-bg {
+      width:100%;
+      height:70vh;
+      background:rgba(0,0,0,0.5);
+      position:absolute;
+      top: 0;
+      left: 0;
+      z-index: -9998;
+      width: 135%;
+      height: 190%;
+    }
+    .hero-mb {
+      display: block;
+      margin-bottom: 85%;
+    }
+    .heroDesc {
+    margin-top:70%;
+    }
+    .hero-dk {
+      display: none;
+    }
+    .form-label {
+      font-weight: bold;
+      opacity: 0.7;
+    }
+    .title {
+      color: #fff;
+      font-size: 21px;
+    }
+    .heading {
+      color: #fff;
+      opacity:0.85;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+    </style> -->
+
+</head>
+<div class="hero">
+  <div class="bg">
+    <div class="hero-bg-bg"></div>
+    <img class="hero-bg" src="../static//img/semedo 1.png" alt="Background" width="100%" />
+  </div>
+  <div class="hero container">
+    <div class="hero-dk">
+      <div class="row mt-4">
+        <div class="col-md-12" style="padding: 20% 0px 0px 9px;">
+          <div class="d-flex heroku">
+            <div class="heroDesc">
+              <h1 class="mb-4 hero-title" data-aos="fade-up" data-aos-duration="1000">
+                Wisata terbaik untuk pengalaman
+                terbaik
+              </h1>
+              <p class="mb-4 subheading" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                Yuk pilih wisata yang kamu inginkan dan
+                rasakan perjalanan menyenangkan yang
+                ga pernah kamu lupakan.
+              </p>
+              <a href="#app1">
+                <b-button class="btn btn-md btn-primary mt-2" data-aos="fade-up" data-aos-duration="1000"
+                  data-aos-delay="100">
+                  Mulai Sekarang
+                </b-button>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-mb">
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center mb-5">
+            <div class="heroDesc">
+              <h2 class="mb-3 title" style="color:#fff" data-aos="fade-up" data-aos-duration="1000">
+                Wisata terbaik untuk pengalaman yang terbaik.
+              </h2>
+              <p class="mb-4 heading" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                Yuk pilih wisata yang kamu inginkan dan
+                rasakan perjalanan menyenangkan yang
+                ga pernah kamu lupakan.
+              </p>
+              <a href="#app1">
+                <b-button class="btn btn-md btn-primary mt-2" data-aos="fade-up" data-aos-duration="1000"
+                  data-aos-delay="100">
+                  Mulai Sekarang
+                </b-button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section">
+
+  <button class="chat-btn">
+    <i class="material-icons"> comment </i>
+  </button>
+  <div class="chat-popup">
+    <div class="badge">1</div>
+    <div class="chat-area msg-bubble" id="msg-bubble" style="font-size: 10px;">
+      <div class="income-msg">
+        <img src="/static/img/IMG_20221030_145042.jpg" class="avatar" alt="">
+        <span class="msg"> Hai, Apakah ada yang bisa saya bantu
+        </span>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <form class="msger-inputarea" id="userInput">
+        <input type="text" class="msger-input"name="msg" id="msg">
+        <button id="emoji-btn"> &#127773;</button>
+        <button type="submit" id="send" class="msger-send-btn submit"> <i class="material-icons"> send</i></button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
+
+<script>
+  const popup = document.querySelector('.chat-popup');
+  const chatBtn = document.querySelector('.chat-btn');
+  const submitBtn = document.querySelector('.msger-send-btn');
+  const chatArea = document.querySelector('.chat-area');
+  const inputElm = document.querySelector('input');
+  const emojiBtn = document.querySelector('#emoji-btn');
+  const picker = new EmojiButton();
+
+
+  // Emoji selection  
+
+
+  //   chat button toggler 
+
+  chatBtn.addEventListener('click', () => {
+    popup.classList.toggle('show');
+  })
+
+ 
+
+  $(document).ready(function () {
+    document.getElementById("userInput").scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+    $("#userInput").on("submit", function (event) {
+      var rawText = $("#msg").val();
+      console.log(rawText);
+      var coba = $("[name='msg']").val();
+      console.log(coba);
+      let userInput = inputElm.value;
+
+      let temp = `<div class="out-msg">
+      <span class="my-msg">${userInput}</span>
+      <img src="img/me.jpg" class="avatar">
+      </div>`;
+
+      chatArea.insertAdjacentHTML("beforeend", temp);
+      inputElm.value = '';
+      $("#text").val("");
+
+      $.ajax({
+        data: {
+          msg: rawText,
+        },
+        type: "POST",
+        url: "/get",
+      }).done(function (data) {
+        var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+        $("#msg-bubble").append($.parseHTML(botHtml));
+
+      });
+      event.preventDefault();
+    });
+  });
+</script>
+
+</script>
+{% endblock %}

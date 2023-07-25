@@ -1,0 +1,59 @@
+{% include "includes/sidebar.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/koleksiadmin.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+    <div class="row">
+        <div class="col-judul-koleksi">
+            <h2 >koleksi Museum Semedo</h2>
+        </div>
+        <hr>
+        <div class="col" >
+
+            <div class="btn" style="float: right;">
+                <a href="/tambahKolek" >  
+                    <button class="btn btn-primary" style="margin-top: 10px; width: 70px;" type="button">Tambah Data</button> </a>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="row">
+        {% for data in koleksi %}
+        <div class="col-md-12">
+            <div class="card" style="margin-left: 15%;">
+                
+                <div class="card-body">
+                   
+                  <h2>{{data.namakoleksi}}</h2>
+                  
+                 <div class="judul-head" style="display: flex;">
+                    <div class="img-koleksi" >
+                        <img src="../static/img/{{data.gambarkoleksi}}" width="170px" height="150px" alt="">
+                      </div>
+                      <div class="teks-kolek">
+                        <p class="tekk-kol" style="margin: 10px 10px;">{{data.deskripsikoleksi}}</p>
+                      </div>
+                 </div>
+                 <a href="/editkoleksi/{{data.id}}" >  <button class="btn btn-primary" style="margin-top: 10px; width: 70px;" type="button">Edit</button> </a>
+                 <a href="/hapuskoleksi/{{data.id}}" >  <button class="btn btn-secondary btn-danger" style="margin-top: 10px; width: 70px;" type="button">Hapus</button> </a>
+                </div>
+                
+              </div>
+           </div>
+           {% endfor %}
+    </div>
+
+   </div>
+</body>
+</html>
+{% endblock %}

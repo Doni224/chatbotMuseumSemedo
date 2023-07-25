@@ -1,0 +1,36 @@
+{% extends 'includes/include.html' %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="../../static/css/dataset.css">
+    <style>
+        label {
+            font-size: 12px;
+        }
+    </style>
+</head>
+{% include "includes/sidebar.html" %}
+
+<div class="container">
+    <div class="daftarKaryawan">
+        <h2>Isi Data Koleksi</h2>
+        <form method="post" action="/tambahkoleks" enctype = "multipart/form-data">
+            <hr>
+            <div>
+                <label for="profil">Nama koleksi</label>
+                <input maxlength="35" class="form-control" type="text"
+                    name="namakoleksi" required> <br>
+                    <label for="profil">Deskripsi Koleksi</label>
+                <input   class="form-control" type="text"
+                    name="deskoleksi" required> <br>
+                    <label for="gambar">Upload Gambar</label>
+                <input class="form-control" type="file" name="gambar"> <br>
+                <a href="/tambahkoleksi" style="margin-left:21px;"><br>
+                    <button type="submit" class="btn btn-primary">Update Data</button>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

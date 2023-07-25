@@ -1,0 +1,34 @@
+{% extends 'includes/include.html' %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="../../static/css/dataset.css">
+    <style>
+        label {
+            font-size: 12px;
+        }
+    </style>
+</head>
+{% include "includes/sidebar.html" %}
+
+<div class="container">
+    <div class="daftarKaryawan">
+        <h2>Isi Data Chatbot</h2>
+        <form method="post" action="/tambahChatbot" enctype = "multipart/form-data">
+            <hr>
+            <div>
+                    <label for="profil">Patterns</label>
+                <input   class="form-control" type="text"
+                    name="Patterns" required> <br>
+                    <label for="profil">Responses</label>
+                    <input   class="form-control" type="text"
+                        name="Responses" required> <br>
+                <a href="/chatbotadmin" style="margin-left:21px;"><br>
+                    <button type="submit" class="btn btn-primary">Update Data</button>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

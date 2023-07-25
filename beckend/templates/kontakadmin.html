@@ -1,0 +1,52 @@
+{% include "includes/sidebar.html" %}
+<head>
+    <link rel="stylesheet" href="../../static/css/dataset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    <link href='https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+</head>
+<div class="container">
+    <div class="daftarPengunjung ">
+        <h2>Kontak Admin</h2>
+        <br />
+       
+        <div class="clearfix"></div>
+        <br />
+        <div id="filter_tanggal">
+            <div id="result">
+                <table id='empTable' class="table table-striped display dataTable">
+                    <thead class="thead-light">
+                        <tr>
+                            <th width="8%">No_Telpon</th>
+                            <th width="10%">Email</th>
+                            <th width="15%">Facebook</th>
+                            <th width="10%">Instagram</th>
+                            <th width="15%">Youtube</th>
+                            <th width="10%">Twitter</th>
+                            <th width="2%">Aksi</th>
+                        </tr>
+                    </thead>
+                    {% for data in kontakadmin %}
+                    <tr>
+                        <td>{{data.nohp}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.facebook}}</td>
+                        <td>{{data.instagram}}</td>
+                        <td>{{data.youtube}}</td>
+                        <td>{{data.twitter}}</td>
+                        <td width="100">
+                            <a href="/editkontak/{{data.id}}">
+                                <i style="font-size:16px" class="fas fa-edit text-danger" aria-hidden="true"></i></a>
+                            <a href="/hapuskontak/{{data.id}}"><i style="font-size:16px"
+                                    class="fa fa-trash text-danger" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

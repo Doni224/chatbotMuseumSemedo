@@ -1,0 +1,37 @@
+{% extends 'includes/include.html' %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="../../static/css/dataset.css">
+    <style>
+        label {
+            font-size: 12px;
+        }
+    </style>
+</head>
+{% include "includes/sidebar.html" %}
+
+<div class="container">
+    <div class="daftarKaryawan">
+        <h2>Isi Data Profil</h2>
+        <form method="post" action="/updateprofil/{{editprofil.id}}">
+            <hr>
+            <div>
+                <label for="profil">Deskripsi Profil</label>
+                <input value="{{editprofil.profil}}"  class="form-control" type="text"
+                    name="profil"> <br>
+                    <label for="visi">Deskripsi Visi</label>
+                <input value="{{editprofil.visi}}"  class="form-control" type="text"
+                    name="visi"> <br>
+                    <label for="misi">Deskripsi Misi</label>
+                <input value="{{editprofil.misi}}"  class="form-control" type="text"
+                    name="misi">
+                <a href="/popupedit" style="margin-left:21px;"><br>
+                    <button type="submit" class="btn btn-primary">Update Data</button>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
